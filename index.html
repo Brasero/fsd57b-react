@@ -14,18 +14,35 @@
 
  // Créez deux composants et affichez pour chaque étudiant son nom et sa moyenne dans une liste ul/li.
 
- const students = [
-  { notes: [12, 11, 10], name: "Alan" },
-  { notes: [18, 10, 19], name: "Alice" },
-  { notes: [10, 9, 11], name: "Bernard" },
-  { notes: [11, 17, 19], name: "Sophie" },
- ];
 
+
+ const Students = ({students}) => {
+    return students.map((student, i) => {
+     return <Student student={student} key={i} />
+    })
+ }
+
+ const Student = ({student}) => {
+
+  const {notes, name} = student
+
+  const avg = Math.floor((notes.reduce((acc, curr) => acc + curr, 0) / notes.length) * 10) / 10
+
+  return <p>
+   name : {name}, average : {avg}
+  </p>
+
+ }
 
  const App = () => {
-
+  const students = [
+   { notes: [12, 11, 10], name: "Alan" },
+   { notes: [18, 10, 19], name: "Alice" },
+   { notes: [10, 9, 11], name: "Bernard" },
+   { notes: [11, 17, 19], name: "Sophie" },
+  ];
   return (
-   <div></div>
+   <Students students={students} />
   )
  }
 

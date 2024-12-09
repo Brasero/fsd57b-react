@@ -21,17 +21,45 @@
  // // React va re-render le composant <Clock /> dans #root toute les secondes
  // setInterval(() => root.render(<Clock />) , 1000);
 
- const App = () => {
-  return (
-  )
+ const Clock = () => {
+  let clock = new Date;
+  setInterval(() => {
+   clock = new Date;
+   console.log(clock);
+  }, 1000)
+
+  return <p>{clock.toLocaleTimeString()}</p>
  }
 
- ReactDOM.createRoot(
+ class TestState extends React.Component {
+  constructor(props) {
+   super(props);
+
+   this.state = {
+    count: 0
+   }
+  }
+
+  render() {
+   setTimeout(() => {
+    this.setState({count: this.state.count + 1});
+    console.log(this.state);
+   }, 1000)
+
+   return <p>Counter : {this.state.count}</p>
+  }
+ }
+
+ // const App = () => {
+ //  return (
+ //  )
+ // }
+
+ const root = ReactDOM.createRoot(
   document.querySelector("#root")
  )
-  .render(
-    <App />
-  )
+
+ root.render(<TestState />)
 
 </script>
 </body>

@@ -11,19 +11,37 @@
   <div id="root"></div>
   <script type="text/babel">
 
-   const numbers =  [3, 4, 7];
 
    //Créez deux composants :
    //
    // Le premier est un conteneur qui structure l'affichage. (Wrapper)
    // Le deuxième composant affichera les nombres suivants élevés à la puissance 3. (Number)
 
+
+   const Number = ({num, name = "world"}) => {
+
+      return <li>{num ** 3} {name}</li>
+   }
+   const Wrapper = () => {
+
+    const numbers =  [3, 4, 7];
+    return (
+     <ul>
+      {
+         numbers.map((num, i) => {
+         return <Number num={num} name="hello" key={i} />
+        })
+      }
+     </ul>
+    )
+   }
+
    ReactDOM.createRoot(
     document.querySelector("#root")
    )
     .render(
      <div>
-
+      <Wrapper />
      </div>
      )
 

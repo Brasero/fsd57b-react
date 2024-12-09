@@ -12,69 +12,34 @@
 <script type="text/babel">
 
 
- // Définir un composant <Clock /> et essayez d'implémenter une horologe, en utilisant un composant de class et le state
-
- class TestState extends React.Component {
-  constructor(props) {
-   super(props);
-
-   this.state = {
-    count: 0
-   }
-  }
-
-  render() {
-   setTimeout(() => {
-    this.setState({count: this.state.count + 1});
-    console.log(this.state);
-   }, 1000)
-
-   return <p>Counter : {this.state.count}</p>
-  }
+ const App = () => {
+  return (<div>
+    <Counter />
+  </div>)
  }
 
- class Clock extends React.Component {
-  constructor(props) {
-   super(props);
+ const Counter = () => {
 
-   this.state = {
-    clock: new Date,
-    number: 18
-   }
+  const [counter, setCounter] = React.useState(0)
+
+  const handleClick = () => {
+   setCounter(counter + 1)
   }
 
-  render() {
-    setTimeout(() => {
-     this.setState({ clock: new Date})
-    }, 1000)
 
-   return <p>Heure actuelle : {this.state.clock.toLocaleTimeString()}, number : {this.state.number}</p>
-  }
+  return (
+   <div>
+    <p>Counter : {counter}</p>
+    <button onClick={handleClick}>+1</button>
+   </div>
+  )
  }
-
- const ClockFunc = () => {
-  const [clock, setClock] = React.useState(new Date);
-
-  const tick = () => {
-   setTimeout(() => setClock(new Date), 1000)
-   console.log(clock);
-  }
-
-  tick()
-
-  return <div>Heure actuelle : {clock.toLocaleTimeString()}</div>
- }
-
- // const App = () => {
- //  return (
- //  )
- // }
 
  const root = ReactDOM.createRoot(
   document.querySelector("#root")
  )
 
- root.render(<ClockFunc />)
+ root.render(<App />)
 
 </script>
 </body>

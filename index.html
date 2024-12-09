@@ -14,20 +14,33 @@
  //Définissez une constante messages dans le composant App, qui contiendra des messages,
  // puis créez un composant <Messages /> (au pluriel) et un autre composant <Message /> (au singulier) qui affichera les messages se trouvant dans la constante.
 
- const MESSAGES = [
-  { message : "React JS" },
-  { message : "React Native" },
-  { message : "Angular" },
-  { message : "Symfony" },
-  { message : "MongoDB" },
- ];
+
+ const Message = ({message}) => {
+  return <p>{message.message}</p>
+ }
+ const Messages = () => {
+
+  const MESSAGES = [
+   { message : "React JS" },
+   { message : "React Native" },
+   { message : "Angular" },
+   { message : "Symfony" },
+   { message : "MongoDB" },
+  ];
+
+  return (
+   MESSAGES.map((message, i) => {
+    return <Message message={message} key={i} />
+   })
+  )
+ }
 
  ReactDOM.createRoot(
   document.querySelector("#root")
  )
   .render(
    <div>
-
+    <Messages />
    </div>
   )
 

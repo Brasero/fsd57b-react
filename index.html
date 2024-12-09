@@ -18,7 +18,19 @@
  const Message = ({message}) => {
   return <p>{message.message}</p>
  }
- const Messages = () => {
+ const Messages = (props) => {
+
+  const {MESSAGES} = props
+
+
+  return (
+   MESSAGES.map((message, i) => {
+    return <Message message={message} key={i} />
+   })
+  )
+ }
+
+ const App = () => {
 
   const MESSAGES = [
    { message : "React JS" },
@@ -29,9 +41,7 @@
   ];
 
   return (
-   MESSAGES.map((message, i) => {
-    return <Message message={message} key={i} />
-   })
+   <Messages MESSAGES={MESSAGES} />
   )
  }
 
@@ -40,7 +50,7 @@
  )
   .render(
    <div>
-    <Messages />
+    <App />
    </div>
   )
 

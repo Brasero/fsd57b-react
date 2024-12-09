@@ -12,24 +12,7 @@
 <script type="text/babel">
 
 
- // Définir un composant <Clock /> et essayez d'implémenter une horologe. Faites en sorte que dans le DOM l'horloge se mette à jour et affiche les secondes, minutes et heures qui passent.
- //
- //  Remarques : vous pouvez utiliser un setInterval JavaScript pour re-lancer le rendu manuellement. Exemple :
-
- // const root = ReactDOM.createRoot(document.getElementById('root'));
- //
- // // React va re-render le composant <Clock /> dans #root toute les secondes
- // setInterval(() => root.render(<Clock />) , 1000);
-
- const Clock = () => {
-  let clock = new Date;
-  setInterval(() => {
-   clock = new Date;
-   console.log(clock);
-  }, 1000)
-
-  return <p>{clock.toLocaleTimeString()}</p>
- }
+ // Définir un composant <Clock /> et essayez d'implémenter une horologe, en utilisant un composant de class et le state
 
  class TestState extends React.Component {
   constructor(props) {

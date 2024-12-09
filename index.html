@@ -11,44 +11,19 @@
   <div id="root"></div>
   <script type="text/babel">
 
-   const Elem = (props) => {
+   const numbers =  [3, 4, 7];
 
-    const result = props.number * 2;
-
-    const style = {color: "red", textDecoration: "underline"};
-
-    return <div>
-     <div className={"coucou"} style={style}>
-      <h1 className={"title"}>{props.message}</h1>
-      <h2>{result}</h2>
-     </div>
-    </div>
-   }
-
-   const List = (props) => {
-
-    const elems = props.elems ? props.elems :  [];
-
-    return (
-      elems.length ?
-       <ul>
-       {elems.map((elem, i) => {
-        return (<li key={i}>{elem}</li>)
-       })}
-      </ul>
-       :
-       <div style={{color: "red"}}>Aucun élèment de liste à afficher</div>
-    )
-   }
-
+   //Créez deux composants :
+   //
+   // Le premier est un conteneur qui structure l'affichage. (Wrapper)
+   // Le deuxième composant affichera les nombres suivants élevés à la puissance 3. (Number)
 
    ReactDOM.createRoot(
     document.querySelector("#root")
    )
     .render(
      <div>
-      <Elem message={"Coucou"} number={13}/>
-      <List />
+
      </div>
      )
 

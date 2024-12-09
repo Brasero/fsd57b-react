@@ -33,6 +33,38 @@
   }
  }
 
+ class Clock extends React.Component {
+  constructor(props) {
+   super(props);
+
+   this.state = {
+    clock: new Date,
+    number: 18
+   }
+  }
+
+  render() {
+    setTimeout(() => {
+     this.setState({ clock: new Date})
+    }, 1000)
+
+   return <p>Heure actuelle : {this.state.clock.toLocaleTimeString()}, number : {this.state.number}</p>
+  }
+ }
+
+ const ClockFunc = () => {
+  const [clock, setClock] = React.useState(new Date);
+
+  const tick = () => {
+   setTimeout(() => setClock(new Date), 1000)
+   console.log(clock);
+  }
+
+  tick()
+
+  return <div>Heure actuelle : {clock.toLocaleTimeString()}</div>
+ }
+
  // const App = () => {
  //  return (
  //  )
@@ -42,7 +74,7 @@
   document.querySelector("#root")
  )
 
- root.render(<TestState />)
+ root.render(<ClockFunc />)
 
 </script>
 </body>

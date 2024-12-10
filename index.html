@@ -24,16 +24,37 @@
  const Counter = () => {
 
   const [counter, setCounter] = React.useState(0)
+  const [message, setMessage] = React.useState("")
+  const [disabled, setDisabled] = React.useState(false)
 
-  const handleClick = () => {
+  const increment = () => {
+   setMessage("")
+   setDisabled(false)
    setCounter(counter + 1)
+  }
+
+  const decrement = () => {
+
+   if (counter === 0) {
+    setMessage("Impossible de décrémenter en dessous de 0");
+    setDisabled(true);
+    return
+   }
+
+   setCounter(counter - 1)
   }
 
 
   return (
    <div>
     <p>Counter : {counter}</p>
-    <button onClick={handleClick}>+1</button>
+    {
+     message !== "" && <p style={{color: "red"}}>
+      {message}
+     </p>
+    }
+    <button onClick={increment}>+1</button>
+    <button onClick={decrement} disabled={disabled}>-1</button>
    </div>
   )
  }

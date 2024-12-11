@@ -1,13 +1,14 @@
-En utilisant useReducer créer un semblant de calculatrice permettant de faire une addition
-et une mulitplication, il faudra également pouvoir "reset" le contenu des champs de saisie.
-Lors du calcul si une ou plusieur donnée sont manquantes il faudra afficher un message d'erreur pour l'utilisateur
+# Challenge calculatrice
 
-Sous la forme suivante : 
+## En reprenant l'exercice precedent améliorer votre calculatrice
 
-Zone d'affichage du résultat
+### Organisation
+> Créer un component pour l'affichage, un pour les boutons de saisie de chiffre et un pour les boutons d'opérateur
 
-Champs de saisie pour le nombre "a", le champ de saisie pour le nombre "b"
+### Objectif
+> Vous allez créer une calculatrice presque complete, elle sera composé d'un champ de saisie fictif (component d'affichage),
+> 10 boutons de 0 à 9 pour afficher dans la zone de saisie le nombre tapé, ainsi que des boutons "+", "-", "x" (multiplication), "=" et "reset"
 
-La zone du message d'erreur (qui n'apparait qu'en cas d'erreur)
-
-Les 3 boutons [+] [-] [reset]
+### Aspect visuel
+> Votre calculatrice devra ressembler autant que possible à une calculatrice qu'on a l'habitude de voir, 
+> vous pouvez utiliser la technologie de votre choix pour le style (css, scss, less, ...)

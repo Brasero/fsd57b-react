@@ -1,0 +1,10 @@
+.List {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+
+  .empty {
+    grid-column: span 2;
+    color: yellow;
+  }
+}

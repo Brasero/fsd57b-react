@@ -3,12 +3,12 @@ import "./style.scss";
 import NumberButtons from "../NumberButtons/index.jsx";
 import CalcButtons from "../CalcButtons/index.jsx";
 
-const Buttons = ({numberFn, operatorFn, calcFn, onReset}) => {
+const Buttons = () => {
  
  return (
   <div className="Buttons">
-   <NumberButtons onClick={numberFn} />
-   <CalcButtons onClick={operatorFn} calcClick={calcFn} onReset={onReset} />
+   <NumberButtons />
+   <CalcButtons />
   </div>
  )
 }

@@ -1,7 +1,11 @@
 // path: calculator/src/component/Display/index.jsx
 import "./style.scss";
+import {useCalculatorContext} from "../../context/CalculatorContext.jsx";
 
-const Display = ({display, error = ""}) => {
+const Display = () => {
+ 
+ const {state} = useCalculatorContext()
+ const {display, error} = state;
  
  return (
   <div className="Display">

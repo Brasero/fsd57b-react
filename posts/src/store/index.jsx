@@ -6,7 +6,8 @@ const initialState = {
  post: {
   id: id++,
   title: "",
-  content: ""
+  content: "",
+  category: ""
  },
  posts: []
 }
@@ -29,7 +30,8 @@ const reducer = (state, action) => {
      post: {
       id: id++,
       title: "",
-      content: ""
+      content: "",
+      category: ""
      },
      posts: state.posts.concat([state.post])
     }

@@ -1,7 +1,10 @@
 // path: calculator/src/component/NumberButtons/index.jsx
 import "./style.scss";
+import {useCalculatorContext} from "../../context/CalculatorContext.jsx";
 
-const NumberButtons = ({onClick}) => {
+const NumberButtons = () => {
+ 
+ const {handleNumberClick} = useCalculatorContext()
  
  const buttonsArray = Array.from(Array(10).keys())
  
@@ -9,7 +12,7 @@ const NumberButtons = ({onClick}) => {
   <>
    {
     buttonsArray.reverse().map((i) => {
-     return <button key={i} onClick={() => onClick(i)} className={"button__number"}>{i}</button>
+     return <button key={i} onClick={() => handleNumberClick(i)} className={"button__number"}>{i}</button>
     })
    }
   </>

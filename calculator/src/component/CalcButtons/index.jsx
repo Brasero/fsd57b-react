@@ -1,15 +1,18 @@
 // path: calculator/src/component/CalcButtons/index.jsx
 import "./style.scss";
+import {useCalculatorContext} from "../../context/CalculatorContext.jsx";
 
-const CalcButtons = ({onClick, calcClick, onReset}) => {
+const CalcButtons = () => {
+ 
+ const {handleOperatorClick, handleReset, handleCalc} = useCalculatorContext()
  
  return (
   <>
-   <button onClick={onReset} className={"button__calc-reset"}>Reset</button>
-   <button onClick={() => onClick("+")} className={"button__calc"}>+</button>
-   <button onClick={() => onClick("*")} className={"button__calc"}>x</button>
-   <button onClick={() => onClick("-")} className={"button__calc"}>-</button>
-   <button onClick={calcClick} className={"button__calc-equal"}>=</button>
+   <button onClick={handleReset} className={"button__calc-reset"}>Reset</button>
+   <button onClick={() => handleOperatorClick("+")} className={"button__calc"}>+</button>
+   <button onClick={() => handleOperatorClick("*")} className={"button__calc"}>x</button>
+   <button onClick={() => handleOperatorClick("-")} className={"button__calc"}>-</button>
+   <button onClick={handleCalc} className={"button__calc-equal"}>=</button>
   </>
  )
 }

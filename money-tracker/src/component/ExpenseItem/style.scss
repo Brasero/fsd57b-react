@@ -1,0 +1,22 @@
+.ExpenseItem {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  justify-items: flex-start;
+  align-items: center;
+  grid-auto-flow: column;
+  padding: 0 .5rem .4rem;
+
+  .category,
+  .suppress {
+    justify-self: stretch;
+  }
+  .suppress {
+    background: red;
+    border-radius: 0 0 15px 0;
+  }
+  .category {
+    background: #888888;
+    padding: .3rem .7rem;
+    border-top-right-radius: 15px;
+  }
+}

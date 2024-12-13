@@ -1,0 +1,26 @@
+.CatItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: .3rem;
+  margin-bottom: .7rem;
+  border-bottom: 1px solid #535bf2;
+
+  h5 {
+    color: #535bf2;
+    font-size: 1rem;
+  }
+
+  .info {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    width: 100%;
+    grid-gap: .3rem;
+    place-items: flex-end;
+
+    .label {
+      color: #747bff;
+      font-size: .9rem;
+    }
+  }
+}

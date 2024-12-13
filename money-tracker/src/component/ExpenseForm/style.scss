@@ -1,0 +1,30 @@
+.ExpenseForm {
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    align-items: stretch;
+    justify-items: stretch;
+
+    .inputGroup {
+      height: 35px;
+      @extend .ExpenseForm__form;
+      grid-gap: .5rem;
+      grid-template-rows: 1fr 1fr;
+
+      label {
+        justify-self: flex-end;
+      }
+      .error {
+        grid-column: span 2;
+        color: darkred;
+      }
+    }
+
+    button {
+      background: darkgreen;
+    }
+  }
+}

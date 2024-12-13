@@ -22,7 +22,7 @@ const CatItem = ({category}) => {
     <div className={"label"}>Nombre de transactions</div>
     <div className={"label"}>Total</div>
     <div>{nb}</div>
-    <div>{totalRounded || 0}€</div>
+    <div>{totalRounded || 0} €</div>
    </div>
    
   </div>

@@ -4,7 +4,7 @@
 Le projet consiste à créer une application de gestion des dépenses personnelles, où les utilisateurs peuvent enregistrer leurs dépenses et obtenir une vue d'ensemble de leurs dépenses totale et par catégorie. L'application utilisera `useReducer` et `Context API (optionnel)` pour gérer l'état global de l'application.
 
 ### Fonctionnalités principales
-1. Ajout d'une dépense avec un montant et une catégorie.
+1. Ajout d'une dépense avec un montant, un label et une catégorie.
 2. Affichage de la liste des dépenses enregistrées avec les détails correspondants.
 3. Calcul du total des dépenses et detail en fonction des categories.
 

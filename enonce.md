@@ -1,34 +1,38 @@
-# Objectif de l'application
-L'application permet de saisir un texte, de définir un style pour le texte saisi. Et affiche ce texte avec son rendu juste en-dessous du texte saisi.
+# Projet : Gestionnaire de dépenses personnelles
 
-## Les messages
+### Description du projet
+Le projet consiste à créer une application de gestion des dépenses personnelles, où les utilisateurs peuvent enregistrer leurs dépenses et obtenir une vue d'ensemble de leurs dépenses totale et par catégorie. L'application utilisera `useReducer` et `Context API (optionnel)` pour gérer l'état global de l'application.
 
->Vous créez un formulaire permettant de saisir un texte.
+### Fonctionnalités principales
+1. Ajout d'une dépense avec un montant et une catégorie.
+2. Affichage de la liste des dépenses enregistrées avec les détails correspondants.
+3. Calcul du total des dépenses et detail en fonction des categories.
 
->Un bouton select permettra de sélectionner un type de rendu pour le texte : palevioletred (choix par défaut) et tomato. Un autre champ permettra de sélectionner la taille du texte (nombre compris entre 15px et 20px), proposez les choix suivants : 15, 16, 17, 18, 19 et 20px.
+### Exigences techniques
+- Utiliser React.js comme framework de développement.
+- Utiliser `useReducer` et `Context API` > `(optionnel)` pour gérer l'état global de l'application.
+- Utiliser des composants fonctionnels pour créer l'interface utilisateur.
+- Utiliser CSS ou un framework de votre choix pour le style et la mise en page de l'application.
 
->Une fois que l'on a validé, le texte est enregistré dans le store votre useReducer. Chaque rendu peut-être supprimer à l'aide d'un bouton de suppression.
+### Points de notation
+- Ajout d'une dépense (4 points) : L'utilisateur peut ajouter une dépense avec un montant et une catégorie.
+- Affichage des dépenses (3 points) : Les dépenses enregistrées sont affichées avec leurs détails correspondants.
+- Calcul du total des dépenses et par catégorie (5 points) : Le total des dépenses mensuelles est calculé et affiché.
+>P.S. : pensez à la methode de tableau `reduce`
+- Interface utilisateur conviviale et attrayante (3 points) : L'application possède une interface utilisateur intuitive, esthétique et facile à utiliser.
 
-```text
+### Liste de catégories
+1. Alimentation
+2. Logement
+3. Transport
+4. Divertissement
+5. Santé
+6. Éducation
+7. Autres
 
-saisir le texte : [ Bonjour tout le monde ]  
+### Note finale
+La note finale sur 20 sera calculée en fonction du nombre total de points obtenus sur les 15 points possibles.
 
-Selectionnez un rendu : [ palevioletred ]
+N'oubliez pas de planifier votre projet, de répartir les tâches entre les développeurs, de collaborer efficacement et de tester régulièrement votre application tout au long du processus de développement.
 
-taille du texte : [15]
-
-[ valider ]
-
----- Affichez le rendu sous la saisi
-
-Texte 1 :
-
-    [ Bonjour tout le monde ] 
-
-    [Delete]
-Texte 2 :
-
-    [ Un autre texte avec un autre rendu ] 
-
-    [Delete]
-```
+## Bonne chance et amusez-vous bien !
